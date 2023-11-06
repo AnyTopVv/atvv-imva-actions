@@ -43,11 +43,8 @@ jobs:
           auth_token: ${{ secrets.ZEROTIER_CENTRAL_TOKEN }}
 
       - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.KEY }}
-          name: id_rsa 
-          known_hosts: ${{ secrets.HOST }}
+        run:
+          curl http://192.168.191.193:81
 
       - name: deploy
         uses: easingthemes/ssh-deploy@v4.1.0
