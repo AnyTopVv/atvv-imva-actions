@@ -61,7 +61,7 @@ jobs:
           REMOTE_PORT: ${{ secrets.PORT }} # 远程服务器端口号，从 secrets 中读取
           SSH_PRIVATE_KEY: ${{ secrets.KEY }} # SSH 密钥，从 secrets 中读取
           SOURCE: "./Backend/imva/target/imva.jar" # 要拷贝的文件路径
-          TARGET: "/tmp/1024/backend"
+          TARGET: "/tmp/1024/backend/imva.jar"
           SCRIPT_AFTER: |
             cd ~/atvv-imva/backend
             sh stop.sh
