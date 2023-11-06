@@ -33,6 +33,7 @@ jobs:
         run: |
           cd Backend/imva
           mvn clean package
+          ls -al target
           mv target/imva-1.0.jar target/imva.jar
 
       - name: ZeroTier
