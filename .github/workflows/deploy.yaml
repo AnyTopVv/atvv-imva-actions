@@ -45,7 +45,6 @@ jobs:
       - name: ping host
         shell: bash
         run: |
-          zerotier-cli listnetworks
           count=10
           while ! ping -c 1 ${{ secrets.HOST }} ; do
             echo "waiting..." ;
