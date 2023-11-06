@@ -9,7 +9,7 @@ jobs:
     uses: ./.github/workflows/files-changed.yaml
 
   deploy-backend:
-    if: needs.files-changed.outputs.backend == 'true'
+    # if: needs.files-changed.outputs.backend == 'true'
     needs: files-changed
     runs-on: ubuntu-latest
     steps:
